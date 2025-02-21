@@ -1,0 +1,29 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application de Gestion de Tâches</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Ma Todo List</h1>
+    </header>
+    <!-- Formulaire pour ajouter une nouvelle tâche -->
+    <form id="task-form" class="task-input">
+      <input type="text" id="new-task" placeholder="Ajouter une nouvelle tâche">
+      <button type="submit">Ajouter</button>
+    </form>
+    <!-- Liste des tâches -->
+    <section class="task-list">
+      <ul id="task-list">
+        <!-- Les tâches ajoutées seront insérées ici -->
+      </ul>
+    </section>
+  </div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
