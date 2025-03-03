@@ -1,18 +1,14 @@
 // tasks.js
 
-// Variable interne pour stocker les tâches
+
 let tasks = [];
 
-/**
- * Sauvegarde le tableau des tâches dans localStorage.
- */
+
 export function saveTasks() {
   localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
-/**
- * Charge les tâches depuis localStorage et renvoie le tableau.
- */
+
 export function loadTasks() {
   const tasksJSON = localStorage.getItem('tasks');
   tasks = tasksJSON ? JSON.parse(tasksJSON) : [];
@@ -27,16 +23,16 @@ export function loadTasks() {
 export function createTaskElement(taskText) {
   const li = document.createElement('li');
 
-  // Création d'un élément span pour afficher le texte
+
   const span = document.createElement('span');
   span.textContent = taskText;
 
-  // Création du bouton de suppression
+
   const deleteBtn = document.createElement('button');
   deleteBtn.textContent = 'Supprimer';
   deleteBtn.classList.add('delete-button');
 
-  // Lorsqu'on clique sur le bouton, on supprime la tâche
+  
   deleteBtn.addEventListener('click', () => {
     removeTask(taskText, li);
   });
